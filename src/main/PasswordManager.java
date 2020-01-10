@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package main;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -13,10 +8,6 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-/**
- *
- * @author Mason
- */
 public class PasswordManager implements Serializable {
     private static ArrayList<Password> passwords = new ArrayList<Password>();
     
@@ -67,9 +58,6 @@ public class PasswordManager implements Serializable {
         FileInputStream fis = null;
         ObjectInputStream ois = null;
  
-        // creating List reference to hold AL values after de-serialization 
-        ArrayList<Password> listOfCustomers = null;
- 
         try {
             // reading binary data
             fis = new FileInputStream("passwords.ser");
@@ -92,13 +80,17 @@ public class PasswordManager implements Serializable {
  
         System.out.println("ArrayList object de-serialized from "
                 + "ArrayListOfCustomer.ser file\n");
- 
-        // iterating & printing ArrayList values to console
-        for(Password p : passwords){
+
+        outputPasswordsToConsole(passwords)
+
+        return true;
+    }
+
+    public static boolean outputPasswordsToConsole(ArrayList<Password> passwords) {
+        for (Password p : passwords){
             System.out.println(p);
         }
         
         System.out.println(passwords);
-        return true;
     }
 }
