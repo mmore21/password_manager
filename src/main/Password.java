@@ -2,13 +2,16 @@ package main;
 
 import java.io.Serializable;
 
-public class Password implements Serializable {
+public class Password implements Serializable
+{
+    private String name
+    private String username
+    private String email
+    private String password
+    private String note;
     
-    // instance fields
-    private String name, username, email, password, note;
-    
-    // constructor
-    public Password(String na, String u, String e, String p, String no) {
+    public Password(String na, String u, String e, String p, String no)
+    {
         name = na;
         username = u;
         email = e;
@@ -16,7 +19,6 @@ public class Password implements Serializable {
         note = no;
     }
     
-    // methods
     public String getName() {
         return name;
     }
