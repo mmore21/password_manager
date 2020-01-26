@@ -4,10 +4,10 @@ import java.io.Serializable;
 
 public class Password implements Serializable
 {
-    private String name
-    private String username
-    private String email
-    private String password
+    private String name;
+    private String username;
+    private String email;
+    private String password;
     private String note;
     
     public Password(String na, String u, String e, String p, String no)

@@ -81,16 +81,17 @@ public class PasswordManager implements Serializable {
         System.out.println("ArrayList object de-serialized from "
                 + "ArrayListOfCustomer.ser file\n");
 
-        outputPasswordsToConsole(passwords)
+        outputPasswordsToConsole(passwords);
 
         return true;
     }
 
-    public static boolean outputPasswordsToConsole(ArrayList<Password> passwords) {
+    public static void outputPasswordsToConsole(ArrayList<Password> passwords) {
         for (Password p : passwords){
             System.out.println(p);
         }
         
         System.out.println(passwords);
+        
     }
 }
